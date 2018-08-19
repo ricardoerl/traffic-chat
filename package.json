@@ -1,16 +1,20 @@
 {
-  "name": "Traffic Chat",
+  "name": "traffic-chat",
   "version": "0.1.0",
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Rodrigo Puente",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   }
