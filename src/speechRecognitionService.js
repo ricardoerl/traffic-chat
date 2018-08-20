@@ -1,5 +1,5 @@
 const speechRecognitionService = () => {
-  const recognition = new SpeechRecognition()
+  const recognition = new SpeechRecognition() // eslint-disable-line new-cap, no-undef
   // The final speech recognition will be stored here
   let finalResult
 
@@ -12,13 +12,13 @@ const speechRecognitionService = () => {
     console.log('onstart')
   }
 
-  recognition.onerror = (event) => {
+  recognition.onerror = event => {
     console.log('error', event.error)
   }
 
   // TODO , RETURN INTERIM AND PRINT FOR BETTER VISUAL STUFF
   // PURO PLANTE, PUES
-  recognition.onresult = (event) => {
+  recognition.onresult = event => {
     finalResult = event.results[0][0].transcript
   }
 
@@ -26,7 +26,7 @@ const speechRecognitionService = () => {
     recognition.start()
   }
 
-  const onEnd = (cb) => {
+  const onEnd = cb => {
     recognition.onend = () => {
       cb(finalResult)
     }
